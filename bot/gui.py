@@ -75,8 +75,10 @@ class Window(QFrame):
         self.createMessageGroupBox()
         self.createBotControls()
 
-        self.setFrameStyle(QFrame.StyledPanel | QFrame.Sunken)
-        self.setLineWidth(2)
+        #self.setFrameStyle(QFrame.StyledPanel | QFrame.Sunken)
+        #self.setLineWidth(2)
+        self.setObjectName("BotFrame")
+        self.setStyleSheet("#BotFrame {border: 2px solid #9e3939;}")
         self.iconLabel.setMinimumWidth(self.durationLabel.sizeHint().width())
 
         self.createActions()

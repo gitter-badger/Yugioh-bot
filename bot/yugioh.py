@@ -361,7 +361,7 @@ def ScanForWord(word, corr=HIGH_CORR, log=None):
     corrword = 'HIGH' if corr == HIGH_CORR else 'LOW'
     root.debug("LOOK FOR WORD '{}', {} CORRERLATION".format(word, corrword))
     img = utils.GetImgFromScreenShot()
-    t = tm.Trainer(img, 480, 0)
+    t = tm.Trainer(img, 480, 150)
     location = defaultlocations.assets
     location = os.path.join(location, "ok_box.png")
     if t.getMatches(location, corr):
